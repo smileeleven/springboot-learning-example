@@ -4,22 +4,22 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.spring.springboot.domain.City;
-import org.spring.springboot.service.CityService;
-import org.spring.springboot.service.impl.CityServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import test.org.spring.springboot.Application;
+import test.org.spring.springboot.domain.City;
+import test.org.spring.springboot.service.CityService;
+import test.org.spring.springboot.service.impl.CityServiceImpl;
 
 /**
  * Created by bysocket on 05/06/2017.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = Application.class)
 public class ApplicationTests {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CityServiceImpl.class);
-
 
     @Autowired
     private CityService cityService;
